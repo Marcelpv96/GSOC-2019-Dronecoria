@@ -1,0 +1,83 @@
+# cd /path/to/tensorflow
+# cd models/research
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/deeplab
+# python deeplab/model_test.py
+
+IMAGE_FOLDER="/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/dataset/burnt"
+SEMANTIC_SEGMENTATION_FOLDER=""/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/dataset/segmented_tf"
+LIST_FOLDER="/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/dataset/list_folder"
+IMAGE_FORMAT="png"
+OUTPUT_DIR="/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/dataset/output"
+
+# TF GENERATION
+
+python3 build_voc2012_data.py \
+  --image_folder=$IMAGE_FOLDER \
+  --semantic_segmentation_folder=$SEMANTIC_SEGMENTATION_FOLDER \
+  --list_folder=$LIST_FOLDER \
+  --image_format=$IMAGE_FORMAT \
+  --output_dir=$OUTPUT_DIR
+
+
+# Preliminary training
+
+python3 deeplab/train.py \
+    --logtostderr \
+    --training_number_of_steps=300 \
+    --train_split="train" \
+    --model_variant="xception_65" \
+    --atrous_rates=6 \
+    --atrous_rates=12 \
+    --atrous_rates=18 \
+    --output_stride=16 \
+    --decoder_output_stride=4 \
+    --train_crop_size=513,513 \
+    --train_batch_size=2 \
+    --dataset="mydata" \
+    --tf_initial_checkpoint='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/research/deeplab/backbone/deeplabv3_cityscapes_train/model.ckpt' \
+    --train_logdir='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/research/deeplab/burnt_forest/train' \
+    --dataset_dir='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/dataset/output' \
+    --initialize_last_layer=False \
+    --last_layers_contain_logits_only=False \
+    --fine_tune_batch_norm=False
+
+
+# Advanced train 
+
+python3 deeplab/train.py \
+    --logtostderr \
+    --training_number_of_steps=900 \
+    --train_split="train" \
+    --model_variant="xception_65" \
+    --atrous_rates=6 \
+    --atrous_rates=12 \
+    --atrous_rates=18 \
+    --output_stride=16 \
+    --decoder_output_stride=4 \
+    --train_crop_size=321,321 \
+    --train_batch_size=4 \
+    --dataset="mydata" \
+    --tf_initial_checkpoint='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/research/deeplab/backbone/deeplabv3_cityscapes_train/model.ckpt' \
+    --train_logdir='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/research/deeplab/burnt_forest/train' \
+    --dataset_dir='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/dataset/output'
+
+
+# Visualization 
+
+python3 deeplab/vis.py \
+    --logtostderr \
+    --vis_split="val" \
+    --model_variant="xception_65" \
+    --atrous_rates=6 \
+    --atrous_rates=12 \
+    --atrous_rates=18 \
+    --output_stride=16 \
+    --decoder_output_stride=4 \
+    --vis_crop_size=812,948 \
+    --dataset="mydata" \
+    --colormap_type="pascal" \
+    --checkpoint_dir='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/research/deeplab/burnt_forest/train' \
+    --vis_logdir='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/research/deeplab/burnt_forest/vis' \
+    --dataset_dir='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/dataset/output'
+
