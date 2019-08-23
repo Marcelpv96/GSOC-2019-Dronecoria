@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="p-lg-5">
+    <p>Insert here the name of your new gallery.</p>
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-outline-secondary">Save gallery</button>
+    </form>
+
+
+</div>
+
+
+<div class="p-lg-5" align="center">
+    <p>Now you have the option to add images to your gallery or other galleries, or return to galleries.</p>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="{% url 'upload_images_gallery' %}" class="btn btn-primary">Upload images to a gallery</a>
+        <a href="{% url 'burnt' %}" class="btn btn-primary">Return to galleries</a>
+    </div>
+</div>
+
+{% endblock %}

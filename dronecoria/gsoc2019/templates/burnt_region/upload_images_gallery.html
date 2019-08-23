@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="p-lg-5">
+    Add a name that will act as reference to your KML
+   <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      {{ form.as_p }}
+      <div class="dropzone" style="border: 1px solid red;"></div>
+
+      <button type="submit" class="btn btn-outline-secondary">Upload</button>
+    </form>
+</div>
+
+
+<div class="p-lg-5" align="center">
+    <p>Now you have the option to create a new gallery, or return to galleries.</p>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="{% url 'new_gallery' %}" class="btn btn-primary">Create a new gallery</a>
+        <a href="{% url 'burnt' %}" class="btn btn-primary">Return to galleries</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="p-lg-1" align="center">
+    <div class="btn-group" role="group" aria-label="Third group">
+        <a class="btn btn-link" href="{% url 'clean_kml_demo'  %}">Clean all content of liquid galaxy</a>
+        <a class="btn btn-link" href="{% url 'stop_tour_demo'  %}">Stop orbit</a>
+
+    </div>
+</div>
+<div class="p-lg-1" align="center">
+    <!-- <div class="wizard-header"> -->
+    <h3>
+        <b> Dronecoria</b>
+         main demo
+        <br>
+    </h3>
+<!-- </div> -->
+    With the button "Start", starts the demonstration of all the functionalities of dronecoria starts.
+    <div class="p-lg-1" align="center">
+
+    <a class="btn btn-outline-success" href="{% url 'start_demo' %}">Start</a>
+    </div>
+    In any moment you are free to press the "Stop" button, and all the things will be stopped.
+    <div class="p-lg-1" align="center">
+    <a class="btn btn-outline-danger" href="{% url 'stop_demo' %}">Stop</a>
+    </div
+</div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="p-lg-1" align="center">
+    <div class="btn-group" role="group" aria-label="Third group">
+        <a class="btn btn-link" href="{% url 'clean_kml_gallery'  %}">Clean all content of liquid galaxy</a>
+        <a class="btn btn-link" href="{% url 'stop_tour_gallery'  %}">Stop orbit</a>
+    </div>
+</div>
+
+<div class="p-lg-5" align="center">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Burnt forest image name</th>
+          <th scope="col">Fly to the forest</th>
+          <th scope="col">Send to LG</th>
+          <th scope="col">Detect burnt region</th>
+          <th scope="col">Reforestation</th>
+          <th scope="col">Delete Gallery</th>
+          <th scope="col">View Gallery</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for gallery in Galleries %}
+        <tr>
+            <td>{{ gallery.name }}</td>
+            <td><a class="btn btn-outline-dark" href="{% url 'fly_to_forest' galleryname=gallery.name  %}">fly to</a></td>
+            <td><div class="btn-group" role="group" aria-label="Third group">
+                <a class="btn btn-outline-success" href="{% url 'send_gallery' galleryname=gallery.name %}">Send</a>
+                <a class="btn btn-outline-danger" href="{% url 'clean_gallery' galleryname=gallery.name %}">Clean</a>
+            </td>
+            <td><div class="btn-group" role="group" aria-label="Third group">
+                <a class="btn btn-outline-info" href="{% url 'send_images' galleryname=gallery.name  %}">Detect</a>
+                <a class="btn btn-outline-danger" href="{% url 'clean_images' galleryname=gallery.name  %}">Clean</a>
+            </td>
+            <td><div class="btn-group" role="group" aria-label="fourth group">
+                <a class="btn btn-outline-success" href="{% url 'reforest' galleryname=gallery.name %}">Reforestation</a>
+                <a class="btn btn-outline-danger" href="{% url 'clean_reforest' galleryname=gallery.name %}">clean</a>
+            </td>
+            <td><a class="btn btn-outline-danger" href="{% url 'delete_gallery' galleryname=gallery.name  %}">Delete</a></td>
+            <td><a class="btn btn-outline-dark" href="{% url 'show_gallery' galleryname=gallery.name  %}">View gallery</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+</div>
+
+<div class
+
+<div class="p-lg-5" align="center">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="{% url 'new_gallery' %}" class="btn btn-primary">New gallery</a>
+        <a href="{% url 'upload_images_gallery' %}" class="btn btn-primary">Upload images to a gallery</a>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

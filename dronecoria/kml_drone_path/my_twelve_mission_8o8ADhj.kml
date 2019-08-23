@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+ <Document>
+  <name>QGC KML</name>
+  <open>1</open>
+  <Style id="yellowLineGreenPoly">
+   <LineStyle>
+    <color>7f00ffff</color>
+    <width>4</width>
+   </LineStyle>
+   <PolyStyle>
+    <color>7f00ff00</color>
+   </PolyStyle>
+  </Style>
+  <Placemark>
+   <styleUrl>yellowLineGreenPoly</styleUrl>
+   <name>Absolute</name>
+   <description>Transparent purple line</description>
+   <LookAt>
+    <longitude>0.6999036</longitude>
+    <latitude>42.0983803</latitude>
+    <altitude>0</altitude>
+    <heading>-100</heading>
+    <tilt>45</tilt>
+    <range>2500</range>
+   </LookAt>
+   <LineString>
+    <extruder>1</extruder>
+    <tessellate>1</tessellate>
+    <altitudeMode>absolute</altitudeMode>
+    <coordinates>0.6999036,42.0983803,760.00
+0.7069401,42.0987761,760.00
+0.7069401,42.0985493,760.00
+0.6999336,42.0981090,760.00
+0.6999935,42.0979133,760.00
+0.7070300,42.0983136,760.00
+0.7070420,42.0980512,760.00
+0.7000774,42.0976332,760.00
+0.7000834,42.0974063,760.00
+0.7070660,42.0978244,760.00
+0.7071019,42.0975175,760.00
+0.7000954,42.0971173,760.00
+0.7001194,42.0968282,760.00
+0.7071679,42.0972462,760.00
+0.7072458,42.0970239,760.00
+0.7002512,42.0964769,760.00
+0.7003711,42.0961611,760.00
+0.7073057,42.0966903,760.00
+0.7072997,42.0964057,760.00
+0.7004550,42.0957831,760.00
+0.7004490,42.0953961,760.00
+0.7073597,42.0959565,760.00
+</coordinates>
+   </LineString>
+  </Placemark>
+ </Document>
+</kml>

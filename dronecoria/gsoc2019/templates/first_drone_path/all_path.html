@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-lg-1" align="center">
+    <a class="btn btn-link" href="{% url 'clean_kml_gallery'  %}">Clean all content of liquid galaxy</a>
+</div>
+
+<div class="p-lg-1" align="center">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">File name</th>
+          <th scope="col">Send to LG</th>
+          <th scope="col">Delete path</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for document in Documents %}
+        <tr>
+            <td>{{ document.name }}</td>
+            <td><a class="btn btn-outline-success" href="{% url 'send_path_kml' kmlname=document.name %}">Send</a></td>
+            <td><a class="btn btn-outline-danger" href="{% url 'delete_path_kml' kmlname=document.name %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+<div class="p-lg-5">
+<a href="{% url 'load_path' %}" class="btn btn-primary">Upload drone path</a>
+</div>
+{% endblock %}

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>drone_path.kml</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Els meus llocs</name>
+		<open>1</open>
+		<Style>
+			<ListStyle>
+				<listItemType>check</listItemType>
+				<ItemIcon>
+					<state>open</state>
+					<href>:/mysavedplaces_open.png</href>
+				</ItemIcon>
+				<ItemIcon>
+					<state>closed</state>
+					<href>:/mysavedplaces_closed.png</href>
+				</ItemIcon>
+				<bgColor>00ffffff</bgColor>
+				<maxSnippetLines>2</maxSnippetLines>
+			</ListStyle>
+		</Style>
+		<Placemark>
+			<name>Drone_path1</name>
+			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					0.9032509887097762,41.89596955964458,0 0.9098183975534457,41.89626966440697,0 0.9091705351717838,41.89081777431441,0 0.9086886689395679,41.89087597030927,0 0.9091115955191453,41.8962366629774,0 0.9083893746335492,41.89620410239677,0 0.9081653530607769,41.89085650577562,0 0.9075239290816661,41.89081345086378,0 0.9077391312798277,41.89617612818285,0 0.9070735945034381,41.89612788521433,0 0.9070167836484178,41.89078382604108,0 0.9065199729710405,41.89079815539507,0 0.9066455219996339,41.8961486713651,0 0.9060380177376981,41.89609187123884,0 0.9059090151230476,41.89077076748787,0 0.9054241221877835,41.89078362915369,0 0.9054915334854474,41.8960785019481,0 0.904896919668603,41.89602352331683,0 0.9049690656472142,41.89077047293748,0 0.9045572891024922,41.89080445984921,0 0.9044803987849193,41.89601109039409,0 0.9039953788985855,41.89603358882128,0 0.9042777107959665,41.89079090563504,0 0.9038793995602323,41.89081368274778,0 0.9035996341842667,41.89598385862873,0 0.903656705502538,41.89084272081764,0 0.9034174573178744,41.89086339194139,0 0.9032509887097762,41.89596955964458,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>TopRightCorner</name>
+			<LookAt>
+				<longitude>0.9076595710566182</longitude>
+				<latitude>41.89571792112437</latitude>
+				<altitude>0</altitude>
+				<heading>0.0006820160553138248</heading>
+				<tilt>47.79164050842701</tilt>
+				<range>1964.884391862396</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>0.9098352408533406,41.89626134634238,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ToplLeftCorner</name>
+			<LookAt>
+				<longitude>0.9088862887258831</longitude>
+				<latitude>41.89701163386768</latitude>
+				<altitude>0</altitude>
+				<heading>0.001501258697434077</heading>
+				<tilt>47.79193325037031</tilt>
+				<range>2008.884291398493</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>0.903269859031961,41.8959743853982,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BotRightCorner</name>
+			<LookAt>
+				<longitude>0.9088862887258831</longitude>
+				<latitude>41.89701163386768</latitude>
+				<altitude>0</altitude>
+				<heading>0.001501258697434077</heading>
+				<tilt>47.79193325037031</tilt>
+				<range>2008.884291398493</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>0.9091646851280344,41.89080905179021,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BotLeftCorner</name>
+			<LookAt>
+				<longitude>0.9088862887258831</longitude>
+				<latitude>41.89701163386768</latitude>
+				<altitude>0</altitude>
+				<heading>0.001501258697434077</heading>
+				<tilt>47.79193325037031</tilt>
+				<range>2008.884291398493</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>0.903442555362437,41.89088970071277,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
