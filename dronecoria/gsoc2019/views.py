@@ -8,15 +8,10 @@ from gsoc2019.models import *
 from gsoc2019.forms import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import View
-from braces.views import (
-    AjaxResponseMixin,
-    JSONResponseMixin,
-    LoginRequiredMixin,
-    SuperuserRequiredMixin,
-)
+
 import os
 from gsoc2019.aux_functions import *
-from gsoc2019.demo import *
+from gsoc2019.demo import main_demo, stop
 
 
 def load_path(request):
