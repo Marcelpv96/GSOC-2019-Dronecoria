@@ -86,6 +86,7 @@ On the root of the project, appears a file named commands. Inside this file ther
 - image_format: the format of original images, and it is png format in my case
 - output_dir: the path for saving generated TFRecord files (mkdir by yourself)
 
+### 2.2 Train
 
 #### Modify training script
 
@@ -148,7 +149,7 @@ Only pick one command
 
 
 
-#### Visualization
+### 2.3 Visualization
 
 Validate that your model works:
 
@@ -169,7 +170,7 @@ Validate that your model works:
 >       --dataset_dir='/Users/Marcelpv96/Dropbox/UNI/LiquidLGalaxy/GSOC-2019-Dronecoria/model/dataset/output'
 
 
-### Freeze your model
+### 2.4 Freeze your model
 
 Export your model, and put the path of your model inside the variable MODEL_PATH of GSOC-2019-Dronecoria/blob/master/dronecoria/dronecoria/settings.py
 
