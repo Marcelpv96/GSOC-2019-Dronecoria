@@ -40,10 +40,12 @@ Then you have to install requirements from 'requirements.txt'  file
 
 Configure your LG API IP
 > cd ~/
+
 > export API_IP=your api ip
 
 Finally
 > cd Dronecoria
+
 > python manage.py runserver yourip:port
 
 
