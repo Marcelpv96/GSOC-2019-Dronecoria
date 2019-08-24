@@ -2,7 +2,7 @@
 
 This folder contains machine learning models implemented by researchers in
 [TensorFlow](https://tensorflow.org). The models are maintained by their
-respective authors, on [TensorFlow](https://github.com/tensorflow/models/tree/master/research). Here on this repository, this models are modifications
+respective authors, on [TensorFlow](https://github.com/tensorflow/models/tree/master/research). Here on this repository, this models are modifications of the originals adapted to the binary image segmentation of burnt / non burnt areas.
 
 ## Models
 
