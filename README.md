@@ -1,4 +1,4 @@
-# Google Summer Of Code,  2019 Dronecoria Project
+# Google Summer Of Code 2019, Dronecoria Project
 
 This project is the result of the work done during the three months of Google Of Summer of Code internship. This project is a web Application that works with Liquid Galaxy as the visualization tool, and brings to the user the power to send images of burnt regions, and detect them using a Machine Learning model, previously trained by the user.
 
