@@ -10,4 +10,4 @@ Pillow==6.1.0
 django_braces==1.13.0
 beautifulsoup4==4.8.0
 prettytable==0.7.2
-tensorflow==1.14.0
+tensorflow==1.15.0
